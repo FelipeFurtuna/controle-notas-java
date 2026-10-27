@@ -21,6 +21,12 @@ void main(){
             media = (nota1 + nota2 + nota3) / 3;
             System.out.println("A media desse aluno é de: " + media);
 
+        } else if (escolha ==3) {
+            if (media>=6.0){
+                System.out.println("O aluno encontra se APROVADO");
+            } else {
+                System.out.println("O aluno econtra se REPROVADO");
+            }
         }
     }while (escolha != 0);
     System.out.println("Finalizando....");
