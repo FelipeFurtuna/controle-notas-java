@@ -11,12 +11,32 @@ void main(){
        escolha = sc.nextInt();
 
         if (escolha == 1) {
+
+            System.out.println("as notas vao de 0 a 100");
+            System.out.println("notas erradas iram reiniciar o processo");
+            System.out.println("--------------------------------------");
             System.out.println("Digite a primeira nota ser cadastrada!");
             nota1 = sc.nextDouble();
+
+            if (nota1>100 || nota1 < 0){
+                System.out.println("NOTA INVALIDA!");
+                continue;
+            }
+
             System.out.println("Digite a segunda nota a ser cadastrada!");
             nota2 = sc.nextDouble();
+
+            if (nota2>100 || nota2 < 0){
+                System.out.println("NOTA INVALIDA!");
+                continue;
+            }
             System.out.println("Digite a terceira nota a ser cadastrada!");
             nota3 = sc.nextDouble();
+
+            if (nota3>100 || nota3 < 0){
+                System.out.println("NOTA INVALIDA!");
+                continue;
+            }
         } else if (escolha == 2) {
             media = (nota1 + nota2 + nota3) / 3;
             System.out.println("A media desse aluno é de: " + media);
