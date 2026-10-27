@@ -9,16 +9,16 @@ void main(){
     do {
         MostrarMenu();
        escolha = sc.nextInt();
-
+        //if da escolha
         if (escolha == 1) {
 
-            System.out.println("as notas vao de 0 a 100");
+            System.out.println("as notas vao de 0 a 10");
             System.out.println("notas erradas iram reiniciar o processo");
             System.out.println("--------------------------------------");
             System.out.println("Digite a primeira nota ser cadastrada!");
             nota1 = sc.nextDouble();
-
-            if (nota1>100 || nota1 < 0){
+            //if da nota
+            if (nota1>10 || nota1 < 0){
                 System.out.println("NOTA INVALIDA!");
                 continue;
             }
@@ -36,9 +36,10 @@ void main(){
             if (nota3>100 || nota3 < 0){
                 System.out.println("NOTA INVALIDA!");
                 continue;
-            }
-        } else if (escolha == 2) {
+            } //fim do if da nota
             media = (nota1 + nota2 + nota3) / 3;
+            //continuidade do if da escolha
+        } else if (escolha == 2) {
             System.out.println("A media desse aluno é de: " + media);
 
         } else if (escolha ==3) {
