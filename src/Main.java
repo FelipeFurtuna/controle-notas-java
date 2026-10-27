@@ -21,9 +21,7 @@ void main() {
         //if da escolha
         if (escolha == 1) {
             notasCadastradas = false;
-            System.out.println("as notas vao de 0 a 10");
-            System.out.println("notas erradas iram reiniciar o processo");
-            System.out.println("--------------------------------------");
+            EscolhaDoMenuUm();
             System.out.println("Digite a primeira nota ser cadastrada!");
             nota1 = sc.nextDouble();
 
@@ -63,11 +61,7 @@ void main() {
             if (notasCadastradas == false){
                 System.out.println("nenhuma nota cadastrada");
             } else {
-                if (media >= 6.0) {
-                    System.out.println("O aluno encontra se APROVADO");
-                } else {
-                    System.out.println("O aluno econtra se REPROVADO");
-                }
+                AprovadoOuReprovado(media);
             }
         } else if (escolha == 0) {
             System.out.println("Finalizando....");
@@ -88,4 +82,14 @@ public static void MostrarMenu() {
     System.out.println("---------------------");
     System.out.println("Bem vindo professor");
     System.out.println("Escolha uma opcao: ");
+} public static void EscolhaDoMenuUm(){
+    System.out.println("as notas vao de 0 a 10");
+    System.out.println("notas erradas iram reiniciar o processo");
+    System.out.println("--------------------------------------");
+} public static void AprovadoOuReprovado (double media){
+    if (media >= 6.0) {
+        System.out.println("O aluno encontra se APROVADO");
+    } else {
+        System.out.println("O aluno econtra se REPROVADO");
+    }
 }
