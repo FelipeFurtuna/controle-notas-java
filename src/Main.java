@@ -23,6 +23,8 @@ void main(){
 
         }
     }while (escolha != 0);
+    System.out.println("Finalizando....");
+    System.out.println("obrigado por utilizar");
 
 } public static void MostrarMenu(){
     System.out.println("===== CONTROLE DE NOTAS =====");
