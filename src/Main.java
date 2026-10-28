@@ -44,7 +44,7 @@ void main() {
                 continue;
             } //fim do if da nota
             notasCadastradas = true;
-            media = (nota1 + nota2 + nota3) / 3;//conta da media
+            media = CalcularMedia(nota1, nota2, nota3);//conta da media
 
             //continuidade do if da escolha
         } else if (escolha == 2) {
@@ -93,5 +93,7 @@ public static void MostrarMenu() {
     System.out.println(texto);
     double notalida = sc.nextDouble();
     return notalida;
-
+} public static double CalcularMedia (double nota1, double nota2, double nota3){
+    double media = (nota1 + nota2 + nota3) / 3;
+    return media;
 }
