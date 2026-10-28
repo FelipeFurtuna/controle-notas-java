@@ -15,9 +15,13 @@ void main() {
     do {
 
         MostrarMenu();
+        if (sc.hasNextInt()){}
+        else {
+            System.out.println("voce não digitou um numero!");
+            sc.next();
+            continue;
+        }
         escolha = sc.nextInt();
-
-
         //if da escolha
         if (escolha == 1) {
             notasCadastradas = false;
@@ -77,7 +81,6 @@ public static void MostrarMenu() {
     System.out.println("3 - Consultar situação do aluno");
     System.out.println("0 - Sair");
     System.out.println("---------------------");
-    System.out.println("Bem vindo professor");
     System.out.println("Escolha uma opcao: ");
 } public static void EscolhaDoMenuUm(){
     System.out.println("as notas vao de 0 a 10");
