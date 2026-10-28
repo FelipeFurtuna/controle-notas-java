@@ -22,8 +22,7 @@ void main() {
         if (escolha == 1) {
             notasCadastradas = false;
             EscolhaDoMenuUm();
-            System.out.println("Digite a primeira nota ser cadastrada!");
-            nota1 = sc.nextDouble();
+            nota1 = LerNotas(sc, "Digite a primeira nota: ");
 
             //if da nota
             if (nota1 > 10 || nota1 < 0) {
@@ -32,15 +31,13 @@ void main() {
 
             }
 
-            System.out.println("Digite a segunda nota a ser cadastrada!");
-            nota2 = sc.nextDouble();
+            nota2 = LerNotas(sc, "Digite a segunda nota: ");
 
             if (nota2 > 10 || nota2 < 0) {
                 System.out.println("NOTA INVALIDA!");
                 continue;
             }
-            System.out.println("Digite a terceira nota a ser cadastrada!");
-            nota3 = sc.nextDouble();
+            nota3 = LerNotas(sc, "digite a terceira nota: ");
 
             if (nota3 > 10 || nota3 < 0) {
                 System.out.println("NOTA INVALIDA!");
@@ -92,4 +89,9 @@ public static void MostrarMenu() {
     } else {
         System.out.println("O aluno econtra se REPROVADO");
     }
+} public static double LerNotas (Scanner sc, String texto){
+    System.out.println(texto);
+    double notalida = sc.nextDouble();
+    return notalida;
+
 }
