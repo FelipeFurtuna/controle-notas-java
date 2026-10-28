@@ -11,7 +11,7 @@ void main() {
     double media = 0;
     int escolha = 1;
     boolean notasCadastradas = false;
-
+    boolean notaValida = false;
     do {
 
         MostrarMenu();
@@ -94,8 +94,13 @@ public static void MostrarMenu() {
     }
 } public static double LerNotas (Scanner sc, String texto){
     System.out.println(texto);
+    if (sc.hasNextDouble()){
     double notalida = sc.nextDouble();
     return notalida;
+    } else {
+        sc.next();
+        return -1;
+    }
 } public static double CalcularMedia (double nota1, double nota2, double nota3){
     double media = (nota1 + nota2 + nota3) / 3;
     return media;
